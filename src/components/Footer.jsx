@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-[#0B2847] flex sm:items-center between pt-4 text-white">
       <div className="container mx-auto">
         <hr/>
-        <div className="flex justify-between sm:px-0 px-12 sm:items-center py-12 sm:flex-row flex-col flex-wrap gap-8">
+        <div className="flex justify-between sm:px-8 px-12 sm:items-center py-12 sm:flex-row flex-col flex-wrap gap-8">
           {/* Logo */}
           <div>
             <img src="/logo2.png" alt="Footer Logo" className="h-10" />
