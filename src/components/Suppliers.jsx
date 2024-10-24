@@ -2,7 +2,7 @@ import React from 'react'
 
 const Suppliers = () => {
   return (
-      <div className="flex justify-between items-center sm:px-20 px-6 py-12 bg-[#E8FBFF] border border-blue-300 rounded-md p-6">
+      <div className="flex justify-between items-center md:px-16 px-6 py-12 bg-[#E8FBFF] p-6">
           <div className="text-center">
               <h2 className="sm:text-2xl text-lg font-bold text-black">
                   Let Suppliers <span className="border-b-2 border-b-orange-400">Find You</span>
