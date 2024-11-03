@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function ThiredSec() {
+
+  const [activeLink, setActiveLink] = useState('buyer');
+  
   return (
-    <div className="flex flex-col md:flex-row bg-blue-900 text-white mx-6 md:mx-12 md:px-16 py-16 my-16 items-start justify-between">
+    <div className="flex flex-col md:flex-row bg-blue-900 text-white mx-6 md:mx-12 md:px-14 py-14 my-12 items-start justify-between">
 
       <div className="md:w-1/2 h-full mb-6 md:mb-0 px-3 md:px-0" >
         <div className='w-full  h-full flex relative justify-center rounded-md overflow-hidden items-center' style={{backgroundImage: "url('/y.png')"}}>
@@ -13,9 +16,13 @@ function ThiredSec() {
 
       <div className="md:w-2/5 px-3 md:px-0">
         <div className="flex justify-between gap-3 mb-4">
-          <h2 className="text-[#EB7150] font-bold text-xl py-2 text-center w-1/2 border-b-4 border-[#EB7150]">Buyer</h2>
+          <h2 className={`font-bold ${activeLink === 'buyer' && 'text-[#EB7150] border-b-4 border-[#EB7150]'} cursor-pointer text-xl py-2 text-center w-1/2 transition-colors `}
+            onClick={() => { setActiveLink('buyer')}}
+          >Buyer</h2>
           {/* <h2 className="text-gray-300 font-bold text-lg mx-4">|</h2> */}
-          <h2 className="text-white font-bold text-xl py-2 text-center w-1/2  ">Supplier</h2>
+          <h2 className={`font-bold ${activeLink === 'supplier' && 'text-[#EB7150] border-b-4 border-[#EB7150]'} cursor-pointer text-xl py-2 text-center w-1/2 transition-colors `}
+            onClick={() => { setActiveLink('supplier') }}
+          >Supplier</h2>
         </div>
         <ul className="list-none">
           <li className="flex items-center mb-2 text-lg">

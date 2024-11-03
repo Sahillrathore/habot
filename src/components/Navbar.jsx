@@ -1,28 +1,10 @@
-
-// import { IoIosArrowDown } from "react-icons/io";
-
-// const Navbar = () => {
-//   return (
-//     <div className='flex justify-between items-center p-3'>
-//         <div>
-//             <img src="/logo.png"  alt="Logo" />
-//         </div>
-//       <ul className="flex items-center justify-center gap-4">
-//         <li><a href="">Find Suppliers</a></li>
-//         <li ><a href="" className="flex items-center justify-center">Find Service Tags <span><IoIosArrowDown/></span></a></li>
-//         <li><button type="button" class="btn btn-outline-success">Login/Signup</button></li>
-//       </ul>
-//     </div>
-//   )
-// }
-
-// export default Navbar
 import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hoverState, setHoverState] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -39,21 +21,33 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a 
-              href="#" 
+            <a
+              href="#"
               className="text-gray-700 hover:text-gray-900 transition-colors"
             >
               Find Suppliers
             </a>
-            <a 
-              href="#" 
-              className="text-gray-700 hover:text-gray-900 transition-colors flex items-center gap-1"
+            <a
+              href="#"
+              className="text-gray-700 hover:text-gray-900 transition-all flex items-center gap-1 relative"
+              onMouseOver={() => { setHoverState(true) }}
+              onMouseLeave={() => { setHoverState(false) }}
             >
-              Find Service Tags 
+              Find Service Tags
               <IoIosArrowDown className="text-lg" />
+
+              {
+                hoverState &&
+                <div className='absolute top-5 pt-5 z-10 bg-white rounded-sm  transition-all'
+                >
+                  <li className='list-none px-8 py-1 hover:bg-gray-100'>Buyer</li>
+                  <li className='list-none px-8 py-1 hover:bg-gray-100'>Supplier</li>
+                  <li className='list-none px-8 py-1 hover:bg-gray-100'>Other</li>
+                </div>}
+
             </a>
-            <button 
-              type="button" 
+            <button
+              type="button"
               className="px-4 py-2 border-2 border-green-600 text-green-600 rounded-md hover:bg-green-600 hover:text-white transition-colors"
             >
               Login/Signup

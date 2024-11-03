@@ -3,10 +3,10 @@ import { socialLinks, footerContent } from '../utils/constant';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0B2847] flex sm:items-center between pt-4 text-white">
-      <div className="container mx-auto">
-        <hr/>
-        <div className="flex justify-between sm:px-8 px-12 sm:items-center py-12 sm:flex-row flex-col flex-wrap gap-8">
+    <footer className="bg-[#0B2847] flex sm:items-center between pt-6 py-3 text-white">
+      <div className="w-full mx-auto md:px-28">
+
+        <div className="flex justify-between border-y border-gray-500 sm:px-4 px-8 sm:items-center py-4 mb-4 md:flex-row flex-col flex-wrap gap-8">
           {/* Logo */}
           <div>
             <img src="/logo2.png" alt="Footer Logo" className="h-10" />
@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
 
           {/* Footer Content Sections */}
-          <div className="flex gap-16 sm:flex-row flex-col">
+          <div className="flex gap-16 md:flex-row flex-col">
             {footerContent.map((section, index) => (
               <div key={index} className="flex-1">
                 <h3 className="text-lg font-semibold mb-4">{section.heading}</h3>
@@ -52,7 +52,6 @@ const Footer = () => {
           </div>
         </div>
 
-     <hr className='pt-4'/>
       </div>
     </footer>
   );

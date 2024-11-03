@@ -3,8 +3,8 @@ import { BsArrowRight } from 'react-icons/bs'
 
 function SecondSec() {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-10">
-    <div className="md:w-2/5 text-center md:text-left mb-6 md:mb-0">
+    <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-14 py-10">
+    <div className="md:w-2/5 md:block flex flex-col items-center text-center md:text-left mb-6 md:mb-0">
       <h1 className="text-3xl md:text-4xl font-bold">
         Ready to dive into <span className="text-[#271555]">HABOT?</span>
       </h1>
