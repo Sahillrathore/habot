@@ -23,13 +23,13 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-gray-700 hover:bg-gray-100 px-2 py-2 rounded-sm hover:text-gray-900 transition-colors"
             >
               Find Suppliers
             </a>
             <a
               href="#"
-              className="text-gray-700 hover:text-gray-900 transition-all flex items-center gap-1 relative"
+              className="text-gray-700 hover:text-gray-900 hover:bg-gray-100 px-2 py-2 rounded-sm transition-all flex items-center gap-1 relative"
               onMouseOver={() => { setHoverState(true) }}
               onMouseLeave={() => { setHoverState(false) }}
             >
@@ -38,7 +38,7 @@ const Navbar = () => {
 
               {
                 hoverState &&
-                <div className='absolute top-5 pt-5 z-10 bg-white rounded-sm  transition-all'
+                <div className='absolute top-10 pt-3 z-10 bg-white rounded-sm  transition-all'
                 >
                   <li className='list-none px-8 py-1 hover:bg-gray-100'>Buyer</li>
                   <li className='list-none px-8 py-1 hover:bg-gray-100'>Supplier</li>
@@ -48,7 +48,7 @@ const Navbar = () => {
             </a>
             <button
               type="button"
-              className="px-4 py-2 border-2 border-green-600 text-green-600 rounded-md hover:bg-green-600 hover:text-white transition-colors"
+              className="px-4 py-2 active:scale-95 transition-all border-2 border-green-600 text-green-600 rounded-md hover:bg-green-600 hover:text-white transition-colors"
             >
               Login/Signup
             </button>
